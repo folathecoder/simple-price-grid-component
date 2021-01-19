@@ -1,11 +1,12 @@
 html {
-  height: 100%;
+  height: 100vh;
 }
 
 body {
   font-family: 'Karla', sans-serif;
   background-color: white;
   height: 100vh;
+  max-width: 100%;
   position: relative;
 }
 
@@ -46,7 +47,7 @@ a {
 }
 
 .container {
-  width: 40%;
+  max-width: 600px;
   margin: 100px auto;
   -webkit-box-shadow: 0px 0px 2px #636060;
           box-shadow: 0px 0px 2px #636060;
@@ -56,20 +57,26 @@ a {
       grid-template-columns: repeat(2, 1fr);
   -ms-grid-rows: (1fr)[auto-fit];
       grid-template-rows: repeat(auto-fit, 1fr);
-  grid-auto-rows: repe at(auto-fit, 1fr);
+  grid-auto-rows: repeat(auto-fit, 1fr);
       grid-template-areas: "box1 box1" "box2 box3";
 }
 
-@media screen and (min-width: 400px) and (min-width: 1381px) {
+@media screen and (max-width: 624px) {
   .container {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
 }
 
-@media screen and (min-width: 1381px) {
+@media screen and (max-width: 624px) {
   .container {
-        grid-template-areas: "box1" "box2" "box3";
+        grid-template-areas: "box1" "box2"  "box3";
+  }
+}
+
+@media screen and (max-width: 624px) {
+  .container {
+    margin: 50px 20px;
   }
 }
 

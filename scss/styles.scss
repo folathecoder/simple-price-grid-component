@@ -9,13 +9,25 @@ $color-text-inherit: hsl(218, 22%, 67%);
 $color-text-light: hsl(0, 0%, 100%);;
 
 
+//media queries
+
+@mixin media-query($size) {
+    @if $size == mobile {
+        @media screen and (max-width: 624px) {
+            @content;
+        }
+    }
+}
+
+
 html {
-    height: 100%;
+    height: 100vh;
 }
 body {
     font-family: 'Karla', sans-serif;
     background-color: $color-bg-primary;
     height: 100vh;
+    max-width: 100%;
     position: relative;
 }
 
@@ -52,19 +64,33 @@ a {
 
 
 .container {
-    width: 40%;
+    max-width: 600px;
     margin: 100px auto;
     box-shadow: 0px 0px 2px rgb(99, 96, 96);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-
+    @include media-query(mobile) {
+        grid-template-columns: 1fr;
+    }
     grid-template-rows: repeat(auto-fit, 1fr);
     grid-auto-rows: repeat(auto-fit, 1fr);
     grid-template-areas: 
     "box1 box1"
     "box2 box3";
-}
 
+    @include media-query(mobile) {
+        grid-template-areas: 
+        "box1"
+        "box2" 
+        "box3";
+    }
+
+    @include media-query(mobile) {
+        margin: 50px 20px;
+    }
+
+    
+}
 .price {
     padding: 30px 40px;
 }
@@ -104,8 +130,3 @@ a {
     text-align: center;
         color: black;
 }
-
-
-
-
-
