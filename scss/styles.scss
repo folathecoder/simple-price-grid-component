@@ -29,7 +29,7 @@
     }
 }
 .price {
-    padding: 25px 25px;
+    padding: 25px 30px;
 }
 .price__primary {
     background-color: $color-bg-primary;
@@ -42,7 +42,7 @@
     }
 }
 .price__secondary {
-    background-color: $color-bg-secondary;
+    background-color: darken($color-bg-secondary, $amount: 2%);
     grid-area: box2;
     span {
         font-size: 3rem;
@@ -58,7 +58,7 @@
     }
 }
 .price__tertiary {
-    background-color: desaturate($color-bg-secondary, $amount: 7%);
+    background-color: $color-bg-secondary;
     grid-area: box3;
 }
 .attribution {

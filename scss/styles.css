@@ -90,7 +90,7 @@ a {
 }
 
 .price {
-  padding: 25px 25px;
+  padding: 25px 30px;
 }
 
 .price__primary {
@@ -110,7 +110,7 @@ a {
 }
 
 .price__secondary {
-  background-color: #2ab2af;
+  background-color: #28a9a7;
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: box2;
@@ -132,7 +132,7 @@ a {
 }
 
 .price__tertiary {
-  background-color: #31aaa8;
+  background-color: #2ab2af;
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: box3;
