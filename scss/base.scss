@@ -1,0 +1,33 @@
+html {
+    height: 100vh;
+}
+body {
+    font-family: 'Karla', sans-serif;
+    background-color: $color-bg-primary;
+    height: 100vh;
+    max-width: 100%;
+    position: relative;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: $color-text-primary;
+}
+h2 {
+    font-size: 1.3rem;
+    color: $color-text-light;
+    font-weight: 800;
+}
+p, li {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: $color-text-tertiary;
+    list-style: none;
+}
+ul {
+    padding: 0px 0px;
+}
+a {
+    color: black;
+}

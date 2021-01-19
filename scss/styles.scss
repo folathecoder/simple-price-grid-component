@@ -1,72 +1,13 @@
-//colors
-$color-bg-primary: hsl(0, 0%, 100%);
-$color-bg-secondary:hsl(179, 62%, 43%);
-$color-bg-tertiary: hsl(71, 73%, 54%);
-$color-text-primary: hsl(179, 62%, 43%);
-$color-text-secondary: hsl(71, 73%, 54%);
-$color-text-tertiary: hsl(204, 43%, 93%);
-$color-text-inherit: hsl(218, 22%, 67%);
-$color-text-light: hsl(0, 0%, 100%);;
+@import 'colors';
+@import 'mixin';
+@import 'base';
+@import 'button';
 
-
-//media queries
-
-@mixin media-query($size) {
-    @if $size == mobile {
-        @media screen and (max-width: 624px) {
-            @content;
-        }
-    }
-}
-
-
-html {
-    height: 100vh;
-}
-body {
-    font-family: 'Karla', sans-serif;
-    background-color: $color-bg-primary;
-    height: 100vh;
-    max-width: 100%;
-    position: relative;
-}
-
-h1 {
-    font-size: 2rem;
-    font-weight: 800;
-    color: $color-text-primary;
-}
-h2 {
-    font-size: 1.3rem;
-    color: $color-text-light;
-    font-weight: 800;
-}
-p, li {
-    font-size: 1rem;
-    line-height: 1.5rem;
-    color: $color-text-tertiary;
-    list-style: none;
-}
-ul {
-    padding: 0px 0px;
-}
-a {
-    color: black;
-}
-.btn {
-    text-decoration: none;
-    color: $color-text-light;
-    background-color: $color-bg-tertiary;
-    text-align: center;
-    min-width: 100%;
-    padding: 10px 35%;
-}
-
-
+//main content
 .container {
     max-width: 600px;
     margin: 100px auto;
-    box-shadow: 0px 0px 2px rgb(99, 96, 96);
+    box-shadow: 0px 0px 2px rgb(121, 119, 119);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     @include media-query(mobile) {
@@ -77,32 +18,25 @@ a {
     grid-template-areas: 
     "box1 box1"
     "box2 box3";
-
     @include media-query(mobile) {
         grid-template-areas: 
         "box1"
         "box2" 
         "box3";
     }
-
     @include media-query(mobile) {
         margin: 50px 20px;
     }
-
-    
 }
 .price {
-    padding: 30px 40px;
+    padding: 25px 25px;
 }
-
 .price__primary {
     background-color: $color-bg-primary;
     grid-area: box1;
-
     h2 {
         color: $color-text-secondary;
     }
-
     p {
         color: $color-text-inherit;
     }
@@ -110,7 +44,6 @@ a {
 .price__secondary {
     background-color: $color-bg-secondary;
     grid-area: box2;
-
     span {
         font-size: 3rem;
         line-height: 2rem;
@@ -120,12 +53,14 @@ a {
         font-size: 1rem;
         margin: -30px 0px;
     }
+    a {
+        line-height: 3rem;
+    }
 }
 .price__tertiary {
-    background-color: desaturate($color-bg-secondary, $amount: 20%);
+    background-color: desaturate($color-bg-secondary, $amount: 7%);
     grid-area: box3;
 }
-
 .attribution {
     text-align: center;
         color: black;

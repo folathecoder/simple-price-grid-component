@@ -1,0 +1,9 @@
+//media queries
+
+@mixin media-query($size) {
+    @if $size == mobile {
+        @media screen and (max-width: 624px) {
+            @content;
+        }
+    }
+}
