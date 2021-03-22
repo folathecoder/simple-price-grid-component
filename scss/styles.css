@@ -58,8 +58,8 @@ a {
 .container {
   max-width: 600px;
   margin: 100px auto;
-  -webkit-box-shadow: 0px 0px 2px #797777;
-          box-shadow: 0px 0px 2px #797777;
+  -webkit-box-shadow: 0px 0px 8px rgba(53, 53, 53, 0.11);
+          box-shadow: 0px 0px 8px rgba(53, 53, 53, 0.11);
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
